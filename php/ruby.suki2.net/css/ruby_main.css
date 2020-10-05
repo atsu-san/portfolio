@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+html{
+	/* 1remを定義 */
+	font-size: 20px;
+	background-color: whitesmoke;
+}
+body {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+#main {
+	counter-reset: my_procedure_num;
+}
+h4::before {
+	counter-increment: my_procedure_num;
+	content: counter(my_procedure_num)". ";
+}
+a {
+	color: blue;
+}
+#user_input_textarea {
+	height: 300px; 
+	border: 2px solid gray;
+	width: 100%;
+}
+.parent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+}
+.child {
+	padding: 0 0.2rem;
+}
+#output_preview {
+	background-color: aqua;
+}
+#output_copy {
+	background-color: pink;
+}
+#tagged_output {
+	width: 95%;
+	margin: 0.5rem;
+}
+#ruby_btn, #copy_btn {
+	font-size: 1rem;
+	padding: 1rem;
+	border-radius: 20%;
+	background-color: darkblue;
+	color: white;
+	cursor: pointer;
+}
+#header {
+	text-align: center;
+	overflow: hidden;
+}
+#header a {
+	color: green;
+}
+#header rt {
+	animation-duration: 3s;
+	animation-name: show;
+	color: red;
+}
+@keyframes show {
+	0% {
+		opacity: 0;
+		color: black;
+	}
+	100% {
+		opacity: 1;
+		color: red;
+	}
+}
+#demo {
+	text-align: center;
+}
+#demo1,#demo2,#demo3 {
+	background-color: pink;
+	padding: 0.8rem;
+	margin: 1rem;
+	border-radius: 20%;
+	animation-duration: 6s;
+	animation-name: switch_text;
+	animation-iteration-count: 3;
+}
+#demo1 {
+	animation-delay: -6s;
+}
+#demo2 {
+	animation-delay: -4s;
+}
+#demo3 {
+	animation-delay: -2s;
+}
+
+@keyframes switch_text {
+	0% {
+		opacity: 0;
+	}
+	1%,34% {
+		opacity: 1;
+	}
+	35%,100% {
+		opacity: 0;
+	}
+}
+
+#footer {
+	text-align: center;
+	font-size: small;
+}
+#footer a {
+	color: black;
+	cursor: default;
+	text-decoration: none;
+}
+
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.center {
+	text-align: center;
+}
+.caution_ruby_error {
+	font-size: small;
+}
+
+@media (max-width: 620px) {
+	html {
+		font-size: 14px;
+	}
+}
