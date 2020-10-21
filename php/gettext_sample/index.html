@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gettext sample</title>
+    <style>
+        div {
+            max-width: 600px;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>gettext sample</h1>
+        <label for="locale-select">Locale:</label>
+
+        <select name="locales" id="locale-select" autofocus>
+            <option value="">--Please choose a locale--</option>
+            <option value="en_US.utf8">en_US</option>
+            <option value="ja_JP.utf8">ja_JP</option>
+            <option value="de_DE.utf8">de_DE</option>
+        </select>
+    </div>
+    <div id="translation"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
