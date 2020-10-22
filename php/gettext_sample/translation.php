@@ -1,4 +1,14 @@
 <?php
+//同一文に対して訳し分けが必要な場合はgettextの代わりにユーザー定義関数pgettextを使用
+if (!function_exists('pgettext')) {
+  function pgettext($context, $msgid)
+  {
+    $contextString = "{$context}\004{$msgid}";
+    $translation = gettext($contextString);
+    return ($translation === $contextString) ? $msgid : $translation;
+  }
+}
+
 // 事前にサーバーOSに完全一致のロケール名が存在することを確認する必要あり
 // Linuxの場合「locale -a」で確認
 
