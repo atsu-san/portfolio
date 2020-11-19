@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #toolbar {
+            height: 105px;
+            background-color: lightgray;
+            padding: 5px;
+        }
+
+        #controlArea {
+            max-width: 800px;
+            margin: 1px auto;
+        }
+
+        #penControls {
+            width: 30%;
+            float: left;
+        }
+
+        #colorPalette {
+            width: 55%;
+            float: left;
+            padding: 0 0.5em;
+        }
+
+        #btnArea {
+            width: 8%;
+            float: right;
+        }
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        #penControls td.pen::before {
+            content: "\00270F";
+        }
+
+        input[type="color"],
+        input[type="range"] {
+            width: 100%;
+        }
+
+        #btnArea p {
+            vertical-align: middle;
+        }
+
+        #clearBtn {
+            padding: 1rem 0.1rem;
+            font-size: 16px;
+            border-radius: 10%;
+        }
+    </style>
+    <title>ブラウザ上でお絵描き - ホワイトボード</title>
+</head>
+
+<body>
+    <div id="toolbar">
+        <div id="controlArea">
+            <span id="penControls">
+                <table>
+                    <tr>
+                        <td colspan="4">
+                            <input type="range" min="1" max="60" value="10">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pen"></td>
+                        <td class="pen"></td>
+                        <td class="pen"></td>
+                        <td class="pen"></td>
+                    </tr>
+                </table>
+            </span>
+            <span id="colorPalette">
+                <table>
+                    <tr>
+                        <td colspan="8">
+                            <input type="color">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="white"></td>
+                        <td id="silver"></td>
+                        <td id="gray"></td>
+                        <td id="black"></td>
+                        <td id="red"></td>
+                        <td id="maroon"></td>
+                        <td id="yellow"></td>
+                        <td id="olive"></td>
+                    </tr>
+                    <tr>
+                        <td id="lime"></td>
+                        <td id="green"></td>
+                        <td id="aqua"></td>
+                        <td id="teal"></td>
+                        <td id="blue"></td>
+                        <td id="navy"></td>
+                        <td id="fuchsia"></td>
+                        <td id="purple"></td>
+                    </tr>
+                </table>
+            </span>
+            <span id="btnArea">
+                <p>
+                    <button id="clearBtn">Del</button>
+                </p>
+            </span>
+        </div>
+    </div>
+    <canvas id="myCanvas"></canvas>
+</body>
+<script src="main.js"></script>
+
+</html>
