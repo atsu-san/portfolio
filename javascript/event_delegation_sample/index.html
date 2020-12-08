@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Sample</title>
+    <style>
+        div {
+            width: 480px;
+            margin: 0 auto;
+            padding: 0.5rem;
+        }
+
+        #event_handler_attached {
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        button {
+            display: block;
+            margin: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="event_handler_attached">
+        <button data-color="red">Red</button>
+        <button data-color="yellow">Yellow</button>
+        <button data-color="blue">Blue</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
