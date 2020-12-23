@@ -95,7 +95,7 @@ while (balls.length < numOfBalls) {
         rand(0 + size, height - size),
         rand(-maxSpeed, maxSpeed),
         rand(-maxSpeed, maxSpeed),
-        'rgb(' + rand(0, 255) + ',' + rand(0, 255) + ',' + rand(0, 255),
+        'rgb(' + rand(0, 255) + ',' + rand(0, 255) + ',' + rand(0, 255) + ')',
         size
     );
 
