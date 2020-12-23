@@ -10,7 +10,8 @@ const colorPicker = document.querySelector('input[type="color"]');
 const penSizePicker = document.querySelector('input[type="range"]');
 const clearBtn = document.querySelector('#clearBtn');
 
-clearCanvas();
+ctx.fillStyle = 'rgb(255,255,255)';
+ctx.fillRect(0, 0, width, height);
 
 // ペンの太さを取得
 const penSizes = document.querySelectorAll("#penControls td.pen");
@@ -123,8 +124,9 @@ function drawLine(ctx, x1, y1, x2, y2, color, penWidth) {
 }
 
 function clearCanvas() {
-    ctx.fillStyle = 'rgb(255,255,255)';
-    ctx.fillRect(0, 0, width, height);
+    // ctx.fillStyle = 'rgb(255,255,255)';
+    // ctx.fillRect(0, 0, width, height);
+    location.reload();
 }
 
 clearBtn.onclick = clearCanvas;
@@ -144,3 +146,7 @@ setInterval(() => {
 
     canvas.style.cursor = "url(" + dataURL + ") " + cursorSize * 1 / 6 + " " + cursorSize * 5 / 6 + ", auto";
 }, 100);
+
+// window.addEventListener('orientationchange', function () {
+//     location.reload();
+// });
