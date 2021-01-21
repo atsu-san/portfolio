@@ -31,7 +31,7 @@ public class MonthServlet extends HttpServlet {
 //		System.out.println(result);
 
 //		(2) サーブレット上に出力
-//		res.setContentType("text/html;charset=SJIS");;
+//		res.setContentType("text/html;charset=SJIS");
 //		PrintWriter writer = res.getWriter();
 //		writer.write("<h1>" + result + "</h1>");
 //		writer.close();
