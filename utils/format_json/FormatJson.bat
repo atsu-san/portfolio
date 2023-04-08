@@ -1,0 +1,1 @@
+powershell -NoProfile -ExecutionPolicy Bypass %~dp0FormatJson.ps1

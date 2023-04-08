@@ -1,0 +1,1 @@
+Get-Clipboard | ConvertFrom-JSON | ConvertTo-JSON -Depth 100 | Set-Clipboard
