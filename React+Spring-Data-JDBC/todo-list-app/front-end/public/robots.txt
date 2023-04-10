@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+# サイト全体のクロールを禁止
+Disallow: /
