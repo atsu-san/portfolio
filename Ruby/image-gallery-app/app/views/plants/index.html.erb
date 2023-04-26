@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag "custom" %>
+
+<h1>List of Plants</h1>
+
+<p>Welcome, plant lovers!</p>
+<%= num_of_plants_notice %>
+
+<ul>
+  <% @plants.each do |plant| %>
+    <% unless plant.archived? %>
+      <li>
+        <%= link_to plant.name, plant %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<p>Register your favorite plants now!</p>
+
+<%= link_to "New Plant" , new_plant_path %>

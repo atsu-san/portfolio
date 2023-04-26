@@ -1,0 +1,50 @@
+ /*
+ *= require_tree .
+ *= require_self
+ */
+
+#main {
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+textarea {
+    height: 5rem;
+    width: 100%;
+}
+input[type="text"] {
+    min-width: 16rem;
+}
+input[type="submit"] {
+    margin: 1rem;
+}
+#plant-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 3rem;
+}
+#plant-img-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img.plant-img {
+    width: 16rem;
+}
+* > .home-link {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+* > .back-link {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
