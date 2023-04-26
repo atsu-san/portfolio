@@ -1,0 +1,13 @@
+<%= form_with model: [ @plant, @plant.plant_images.build ] do |form| %>
+  <p>
+    <%= form.label :url %>
+      <br />
+      <%= form.text_area :url %>
+  </p>
+
+  <%= form.hidden_field :status, :value => 'public' %>
+
+  <p>
+    <%= form.submit %>
+  </p>
+  <% end %>

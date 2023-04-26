@@ -1,0 +1,26 @@
+<h1>
+  <%= @plant.name %>
+</h1>
+
+<p>
+  <%= @plant.description %>
+</p>
+
+<ul>
+  <li>
+    <%= link_to "Edit" , edit_plant_path(@plant) %>
+  </li>
+  <li>
+    <%= link_to "Delete" , plant_path(@plant), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+  </li>
+
+  <h2>Image Gallery</h2>
+  <div id="plant-img-container">
+    <%= render @plant.plant_images %>
+  </div>
+
+  <h3>Add an image:</h3>
+  <%= render "plant_images/form" %>
+</ul>
+
+<%= render "home_link" %>

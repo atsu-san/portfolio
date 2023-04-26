@@ -1,0 +1,18 @@
+<% unless plant_image.archived? %>
+  <div>
+    <div>
+      <%= link_to "#{@plant.name} - No.#{plant_image.id}" , plant_image.url, target: :_plank,
+        rel: "noopener noreferrer" %>
+    </div>
+    <div>
+      <img src="<%= plant_image.url %>" alt="" srcset="" class="plant-img">
+    </div>
+
+    <div>
+      <%= link_to "Delete", [plant_image.plant, plant_image], data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %>
+    </div>
+  </div>
+<% end %>
