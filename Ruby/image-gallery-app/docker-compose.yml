@@ -28,6 +28,7 @@ services:
     depends_on:
       - db
     container_name: ruby_web_c
+    entrypoint: /usr/bin/entrypoint.sh
 volumes:
   web_volume:
   postgres_volume:
